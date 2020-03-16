@@ -45,14 +45,14 @@ function TopColumn(props) {
         color={colorMappings[props.topColor]}
       />
       <TopSquare
-        x={props.topLeftX + props.width}
-        y={props.topLeftY - props.width}
+        x={props.topLeftX - props.width}
+        y={props.topLeftY + props.width}
         width={props.width}
         color={colorMappings[props.middleColor]}
       />
       <TopSquare
-        x={props.topLeftX + 2 * props.width}
-        y={props.topLeftY - 2 * props.width}
+        x={props.topLeftX - 2 * props.width}
+        y={props.topLeftY + 2 * props.width}
         width={props.width}
         color={colorMappings[props.bottomColor]}
       />
@@ -65,8 +65,8 @@ function TopSide(props) {
     <g>
       {/* left-most column */}
       <TopColumn
-        topLeftX={props.centerX - 2 * props.width}
-        topLeftY={props.centerY - 2 * props.width}
+        topLeftX={props.centerX}
+        topLeftY={props.centerY - 4 * props.width}
         width={props.width}
         topColor={props.squares[2][2]}
         middleColor={props.squares[1][2]}
@@ -74,22 +74,23 @@ function TopSide(props) {
       />
       {/* middle column */}
       <TopColumn
-        topLeftX={props.centerX - props.width}
-        topLeftY={props.centerY - props.width}
+        topLeftX={props.centerX + props.width}
+        topLeftY={props.centerY - 3 * props.width}
         width={props.width}
         topColor={props.squares[2][1]}
         middleColor={props.squares[1][1]}
         bottomColor={props.squares[0][1]}
       />
-      {/* right-most column*/}
+      {/* right-most column */}
       <TopColumn
-        topLeftX={props.centerX}
-        topLeftY={props.centerY}
+        topLeftX={props.centerX + 2 * props.width}
+        topLeftY={props.centerY - 2 * props.width}
         width={props.width}
         topColor={props.squares[2][0]}
         middleColor={props.squares[1][0]}
         bottomColor={props.squares[0][0]}
       />
+      */}
     </g>
   );
 }
