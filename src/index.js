@@ -417,7 +417,30 @@ class Cube extends React.Component {
     newSides.front.squares[2][0] = this.state.sides.front.squares[2][0];
     newSides.front.squares[2][1] = this.state.sides.front.squares[2][1];
     newSides.front.squares[2][2] = this.state.sides.bottom.squares[2][2];
-    this.setState({
+
+    // top side
+    newSides.top.squares[0][0] = this.state.sides.top.squares[0][0];
+    newSides.top.squares[0][1] = this.state.sides.top.squares[0][1];
+    newSides.top.squares[0][2] = this.state.sides.front.squares[0][2];
+    newSides.top.squares[1][0] = this.state.sides.top.squares[1][0];
+    newSides.top.squares[1][1] = this.state.sides.top.squares[1][1];
+    newSides.top.squares[1][2] = this.state.sides.front.squares[1][2];
+    newSides.top.squares[2][0] = this.state.sides.top.squares[2][0];
+    newSides.top.squares[2][1] = this.state.sides.top.squares[2][1];
+    newSides.top.squares[2][2] = this.state.sides.front.squares[2][2];
+
+
+
+    // right side
+    newSides.right.squares[0][0] = this.state.sides.right.squares[0][2];
+    newSides.right.squares[0][1] = this.state.sides.right.squares[1][2];
+    newSides.right.squares[0][2] = this.state.sides.right.squares[2][2];
+    newSides.right.squares[1][0] = this.state.sides.right.squares[0][1];
+    newSides.right.squares[1][1] = this.state.sides.right.squares[1][1];
+    newSides.right.squares[1][2] = this.state.sides.right.squares[2][1];
+    newSides.right.squares[2][0] = this.state.sides.right.squares[0][0];
+
+
       sides: newSides
     });
   }
@@ -590,40 +613,6 @@ class Cube extends React.Component {
               <tr>
                 <td></td>
                 <td>
-                  <div className="board-side">{this.renderSide("top")}</div>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="board-side">{this.renderSide("left")}</div>
-                </td>
-                <td>
-                  <div className="board-side">{this.renderSide("front")}</div>
-                </td>
-                <td>
-                  <div className="board-side">{this.renderSide("right")}</div>
-                </td>
-                <td>
-                  <div className="board-side">{this.renderSide("back")}</div>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>
-                  <div className="board-side">{this.renderSide("bottom")}</div>
-                </td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          <table>
-            <tbody>
-              <tr>
-                <td></td>
-                <td>
                   <button onClick={() => this.turnCube(DIRECTION_UP)}>
                     &#x2191;
                   </button>
@@ -670,6 +659,40 @@ class Cube extends React.Component {
                 <td>
                   <button onClick={() => this.moveRight()}>{"R"}</button>
                 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>
+                  <div className="board-side">{this.renderSide("top")}</div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="board-side">{this.renderSide("left")}</div>
+                </td>
+                <td>
+                  <div className="board-side">{this.renderSide("front")}</div>
+                </td>
+                <td>
+                  <div className="board-side">{this.renderSide("right")}</div>
+                </td>
+                <td>
+                  <div className="board-side">{this.renderSide("back")}</div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <div className="board-side">{this.renderSide("bottom")}</div>
+                </td>
+                <td></td>
               </tr>
             </tbody>
           </table>
