@@ -68,29 +68,28 @@ function TopSide(props) {
         topLeftX={props.centerX}
         topLeftY={props.centerY - 4 * props.width}
         width={props.width}
-        topColor={props.squares[2][2]}
-        middleColor={props.squares[1][2]}
-        bottomColor={props.squares[0][2]}
+        topColor={props.squares[0][0]}
+        middleColor={props.squares[1][0]}
+        bottomColor={props.squares[2][0]}
       />
-      {/* middle column */}
+      {/* middle column*/}
       <TopColumn
         topLeftX={props.centerX + props.width}
         topLeftY={props.centerY - 3 * props.width}
         width={props.width}
-        topColor={props.squares[2][1]}
+        topColor={props.squares[0][1]}
         middleColor={props.squares[1][1]}
-        bottomColor={props.squares[0][1]}
+        bottomColor={props.squares[2][1]}
       />
-      {/* right-most column */}
+      {/* right-most column*/}
       <TopColumn
         topLeftX={props.centerX + 2 * props.width}
         topLeftY={props.centerY - 2 * props.width}
         width={props.width}
-        topColor={props.squares[2][0]}
-        middleColor={props.squares[1][0]}
-        bottomColor={props.squares[0][0]}
+        topColor={props.squares[0][2]}
+        middleColor={props.squares[1][2]}
+        bottomColor={props.squares[2][2]}
       />
-      */}
     </g>
   );
 }
