@@ -438,8 +438,34 @@ class Cube extends React.Component {
     newSides.right.squares[1][1] = this.state.sides.right.squares[1][1];
     newSides.right.squares[1][2] = this.state.sides.right.squares[2][1];
     newSides.right.squares[2][0] = this.state.sides.right.squares[0][0];
+    newSides.right.squares[2][1] = this.state.sides.right.squares[1][0];
+    newSides.right.squares[2][2] = this.state.sides.right.squares[2][0];
+
+    // bottom side
+    newSides.bottom.squares[0][0] = this.state.sides.bottom.squares[0][0];
+    newSides.bottom.squares[0][1] = this.state.sides.bottom.squares[0][1];
+    newSides.bottom.squares[0][2] = this.state.sides.back.squares[0][2];
+    newSides.bottom.squares[1][0] = this.state.sides.bottom.squares[1][0];
+    newSides.bottom.squares[1][1] = this.state.sides.bottom.squares[1][1];
+    newSides.bottom.squares[1][2] = this.state.sides.back.squares[1][2];
+    newSides.bottom.squares[2][0] = this.state.sides.bottom.squares[2][0];
+    newSides.bottom.squares[2][1] = this.state.sides.bottom.squares[2][1];
+    newSides.bottom.squares[2][2] = this.state.sides.back.squares[2][2];
+    
+    // back side
+    newSides.back.squares[0][0] = this.state.sides.back.squares[0][0];
+    newSides.back.squares[0][1] = this.state.sides.back.squares[0][1];
+    newSides.back.squares[0][2] = this.state.sides.top.squares[0][2];
+    newSides.back.squares[1][0] = this.state.sides.back.squares[1][0];
+    newSides.back.squares[1][1] = this.state.sides.back.squares[1][1];
+    newSides.back.squares[1][2] = this.state.sides.top.squares[1][2];
+    newSides.back.squares[2][0] = this.state.sides.back.squares[2][0];
+    newSides.back.squares[2][1] = this.state.sides.back.squares[2][1];
+    newSides.back.squares[2][2] = this.state.sides.top.squares[2][2];
+    
 
 
+    this.setState({
       sides: newSides
     });
   }
